@@ -20,12 +20,15 @@ let you = Playerpoy()
 
 GameResult(enemy,you)
 WinChecker(enemy,you)
+
+
+
 })
 
 
 function WinChecker(e,p){
 
-    if(e === "paper" && p ==="rock" ){
+    if(e === "paper" && p === "rock" ){
          Swal.fire({
         icon: "error",
         title: "Shamee",
@@ -82,7 +85,13 @@ function WinChecker(e,p){
 }
 
 function GameResult(enemy1,player2){
-resultEL.innerHTML += `You:${player2} Vs Enemy:${enemy1}`
+   let img = " "
+   if (player2 == "rock"){
+    img = `<img src ="/rock.png " width=64px >`
+   }  if (player2 == "scissors"){
+    img = `<img src ="/scissors.png " width=64px >`
+   }
+resultEL.innerHTML += `You:<br>${img} Vs Enemy:${enemy1}`
 }
 
 
