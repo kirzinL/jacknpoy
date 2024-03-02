@@ -86,12 +86,27 @@ function WinChecker(e,p){
 
 function GameResult(enemy1,player2){
    let img = " "
-   if (player2 == "rock"){
-    img = `<img src ="/rock.png " width=64px >`
-   }  if (player2 == "scissors"){
-    img = `<img src ="/scissors.png " width=64px >`
+   let img2 = " "
+   if (player2 === "rock"){
+    img = `<img src ="/rock.png " width=164px >`
    }
-resultEL.innerHTML += `You:<br>${img} Vs Enemy:${enemy1}`
+   else if (player2 === "scissors"){
+    img = `<img src ="/scissors.png " width=164px >`
+   }else{
+    img = `<img src ="/hand.png " width=164px >`
+   }
+
+
+   if (enemy1 === "rock"){
+    img2 = `<img src ="/rock.png " width=164px >`
+   }
+   else if (enemy1 === "scissors"){
+    img2 = `<img src ="/scissors.png " width=164px >`
+   }else{
+    img2 = `<img src ="/hand.png " width=164px >`
+   }
+
+resultEL.innerHTML += `You: ${img} Vs  ${img2} :Enemy`
 }
 
 

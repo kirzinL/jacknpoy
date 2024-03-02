@@ -10,7 +10,18 @@
     justify-content: center;
     align-items: center;
 }
-.result-el{
+#result-el{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 black;
+    
 }
