@@ -4,9 +4,9 @@ let playerpoy = [
     "scissors"
 ]
 let mango = [1,3,6]
+const soundrul = '/win.mp3'
 
-
-
+const winSound = new Audio(soundrul)
 
 const resultEL = document.getElementById("result-el")
 const btnEl = document.getElementById("btn-el")
@@ -42,6 +42,7 @@ function WinChecker(e,p){
         text: "You Win!",
         timer: 1500
             });
+            winSound.play()
     }else if (e == "paper" && p =="scissors"){
            Swal.fire({
         icon: "success",
@@ -49,6 +50,7 @@ function WinChecker(e,p){
         text: "You Win!",
         timer: 1500
             });
+            winSound.play()
     }else if (p == "paper" && e =="scissors"){
         Swal.fire({
         icon: "error",
@@ -70,6 +72,7 @@ function WinChecker(e,p){
         text: "You Win!",
         timer: 1500
             });
+            winSound.play()
         }
     
     
